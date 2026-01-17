@@ -1,0 +1,38 @@
+:root{
+  --bg:#f7f7f7;
+  --ground:#eaeaea;
+  --text:#333;
+  --accent:#2b2b2b;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+#ui{
+  position:fixed;left:12px;top:12px;display:flex;gap:12px;align-items:center;z-index:10;
+}
+#scoreboard{display:flex;flex-direction:column;align-items:flex-start}
+#score{font-weight:700;font-size:18px}
+#highscore{font-size:12px;color:#666}
+#muteBtn{background:#fff;border:1px solid #ddd;padding:6px 8px;border-radius:6px;cursor:pointer}
+canvas#game{
+  display:block;margin:90px auto 40px auto;border-radius:8px;background:linear-gradient(#fff,#fff);
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  max-width:95%;
+  width:800px;height:200px;
+  touch-action: manipulation;
+}
+#overlay{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);z-index:20;
+}
+#overlay.hidden{display:none}
+#message{
+  background:#fff;padding:20px 24px;border-radius:10px;text-align:center;min-width:260px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+#message h1{margin:4px 0 6px 0}
+#message p{margin:8px 0;color:#555}
+#startBtn{background:#222;color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+#finalScore{font-weight:700;margin-top:12px}
+@media (max-width:480px){
+  #message{min-width:200px}
+  canvas#game{height:160px}
+}
