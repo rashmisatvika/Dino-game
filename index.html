@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Offline Dino Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="scoreboard">
+      <div id="score">0</div>
+      <div id="highscore">High: 0</div>
+    </div>
+    <button id="muteBtn" aria-label="Toggle sound">🔊</button>
+  </div>
+
+  <canvas id="game" width="800" height="200"></canvas>
+
+  <div id="overlay" class="hidden">
+    <div id="message">
+      <h1 id="title">Offline Dino</h1>
+      <p id="sub">Press Space / ↑ or Tap to jump</p>
+      <button id="startBtn">Start</button>
+      <p id="finalScore" class="hidden"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
